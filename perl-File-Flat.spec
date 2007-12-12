@@ -2,7 +2,7 @@
 
 Summary:	Perl module that implements a flat filesystem 
 Name:		perl-%{real_name}
-Version:	1.00
+Version:	1.02
 Release:	%mkrel 1
 License:	GPL or Artistic
 Group:		Development/Perl
@@ -20,6 +20,7 @@ BuildRequires:	perl(Test::ClassAPI) >= 1.02
 BuildRequires:	perl(File::Find) >= 1.0
 BuildRequires:	perl(File::Spec) >= 0.85
 BuildRequires:	perl(File::Copy) >= 2.08
+BuildRequires:	perl(File::Copy::Recursive)
 BuildRequires:	perl-File-Slurp >= 9999.04
 BuildRequires:	perl(File::Remove) >= 0.21
 BuildRequires:	perl(File::Temp) >= 0.14
