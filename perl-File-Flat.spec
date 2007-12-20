@@ -27,6 +27,7 @@ BuildRequires:	perl(File::Temp) >= 0.14
 BuildRequires:	perl(IO::File) >= 1.10
 BuildRequires:  perl(File::Copy::Recursive)
 BuildArch:	noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 File::Flat implements a flat filesystem. A flat filesystem is a
