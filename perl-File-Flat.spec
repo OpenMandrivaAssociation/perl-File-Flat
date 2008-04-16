@@ -2,7 +2,7 @@
 
 Summary:	Perl module that implements a flat filesystem 
 Name:		perl-%{real_name}
-Version:	1.03
+Version:	1.04
 Release:	%mkrel 1
 License:	GPL or Artistic
 Group:		Development/Perl
