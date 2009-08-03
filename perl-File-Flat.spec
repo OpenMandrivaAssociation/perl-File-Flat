@@ -1,14 +1,16 @@
-%define real_name File-Flat
+%define upstream_name    File-Flat
+%define upstream_version 1.04
+
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
 Summary:	Perl module that implements a flat filesystem 
-Name:		perl-%{real_name}
-Version:	1.04
-Release:	%mkrel 2
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{real_name}
-Source0:	http://search.cpan.org/CPAN/authors/id/A/AD/ADAMK/%{real_name}-%{version}.tar.bz2
-Requires:	perl-prefork >= 0.02
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://search.cpan.org/CPAN/authors/id/A/AD/ADAMK/%{upstream_name}-%{upstream_version}.tar.bz2
+
 %if %mdkversion < 200600
 BuildRequires:	perl-devel
 %endif
@@ -27,7 +29,8 @@ BuildRequires:	perl(File::Temp) >= 0.14
 BuildRequires:	perl(IO::File) >= 1.10
 BuildRequires:  perl(File::Copy::Recursive)
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
+Requires:	perl-prefork >= 0.02
 
 %description
 File::Flat implements a flat filesystem. A flat filesystem is a
@@ -39,7 +42,7 @@ never need to worry about the existance of directories, just write to a
 file, no matter where it is.
 
 %prep
-%setup -q -n %{real_name}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -60,5 +63,3 @@ rm -rf %{buildroot}
 %doc Changes README
 %{perl_vendorlib}/File/Flat.pm
 %{_mandir}/*/*
-
-
