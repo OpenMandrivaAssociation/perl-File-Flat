@@ -1,15 +1,15 @@
 %define upstream_name    File-Flat
-%define upstream_version 1.04
+%define upstream_version 1.07
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	4
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	Perl module that implements a flat filesystem 
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://search.cpan.org/CPAN/authors/id/A/AD/ADAMK/%{upstream_name}-%{upstream_version}.tar.bz2
+Url:		https://github.com/karenetheridge/File-Flat
+Source0:	https://cpan.metacpan.org/authors/id/E/ET/ETHER/File-Flat-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
