@@ -1,15 +1,13 @@
 %define upstream_name    File-Flat
-%define upstream_version 1.07
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	1.07
+Release:	2
 
 Summary:	Perl module that implements a flat filesystem 
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://github.com/karenetheridge/File-Flat
-Source0:	https://cpan.metacpan.org/authors/id/E/ET/ETHER/File-Flat-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/E/ET/ETHER/File-Flat-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -40,7 +38,7 @@ never need to worry about the existance of directories, just write to a
 file, no matter where it is.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -61,9 +59,7 @@ make test
 %changelog
 * Mon Aug 03 2009 Jérôme Quelin <jquelin@mandriva.org> 1.40.0-1mdv2010.0
 + Revision: 407690
-- rebuild using %%perl_convert_version
-
-* Fri Aug 08 2008 Thierry Vignaud <tv@mandriva.org> 1.04-2mdv2009.0
+- rebuild using %1.07 Fri Aug 08 2008 Thierry Vignaud <tv@mandriva.org> 1.04-2mdv2009.0
 + Revision: 268508
 - rebuild early 2009.0 package (before pixel changes)
 
